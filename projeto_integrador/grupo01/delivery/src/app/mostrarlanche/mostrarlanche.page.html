@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Produtos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{categoria?.nome}}</ion-card-title>
+      
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list> 
+  
+        <ion-item (click)="ircarrinho(produto)" *ngFor="let produto of produtos">
+
+          
+          <ion-thumbnail slot="start">
+            <ion-img [src]="'data:image/png;base64,'+ produto.img"></ion-img>
+          </ion-thumbnail>
+          <ion-label class="ion-text-wrap">
+          <p style="color:black">{{produto.descricao}}</p>
+          <p style="color:green">{{produto.preco | currency:'BRL'}}</p>
+        </ion-label>
+        </ion-item>
+  
+        
+  
+
+  
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

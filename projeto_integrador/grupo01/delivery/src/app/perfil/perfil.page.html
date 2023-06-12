@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+
+  <h1>EDITAR PERFIL</h1>
+  
+  
+  
+  <ion-item>
+    <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input [(ngModel)]="nome" placeholder="Digite aqui seu Nome"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-icon slot="start" name="call-outline"></ion-icon>
+    <ion-label position="floating">Telefone</ion-label>
+    <ion-input [(ngModel)]="telefone" placeholder="Digite aqui seu telefone"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon slot="start" name="location-outline"></ion-icon>
+    <ion-label position="floating">Endereço</ion-label>
+    <ion-input [(ngModel)]="endereco" placeholder="Digite aqui seu endereço"></ion-input>
+  </ion-item>
+
+<br/> 
+
+  <ion-button expand="block">SALVAR</ion-button>
+  
+  </ion-content>
+  

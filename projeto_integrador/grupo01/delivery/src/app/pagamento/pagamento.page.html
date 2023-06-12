@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/endereco"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="pagamento">
+      <ion-item>
+        <ion-label>Dinheiro</ion-label>
+        <ion-radio slot="end" value="dinheiro"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>PIX</ion-label>
+        <ion-radio slot="end" value="pix"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Cartão débito</ion-label>
+        <ion-radio slot="end" value="cdebito"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Cartão crédito</ion-label>
+        <ion-radio slot="end" value="ccredito" ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sodexo</ion-label>
+        <ion-radio slot="end" value="sodexo" [disabled]="true"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Pagamento Online</ion-label>
+        <ion-radio slot="end" value="pgon" [disabled]="true"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-button (click)= "finalizarPedido()" expand="full">FINALIZAR PEDIDO</ion-button>
+
+  <h1 style="text-align: center; color: green;">{{total | currency: 'BRL'}}</h1>
+
+</ion-content>

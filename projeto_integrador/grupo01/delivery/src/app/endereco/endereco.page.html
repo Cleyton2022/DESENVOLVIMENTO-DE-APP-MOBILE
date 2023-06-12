@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/carrinho"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+
+  <h1>ENDEREÇO</h1>
+  
+  
+  
+  <ion-item>
+    <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+    <ion-label position="floating">CEP</ion-label>
+    <ion-input [(ngModel)]="cep" placeholder="Digite aqui seu CEP"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon slot="start" name="location-outline"></ion-icon>
+    <ion-label position="floating">Endereço</ion-label>
+    <ion-input [(ngModel)]="endereco" placeholder="Digite aqui seu endereço"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon slot="start" name="location-outline"></ion-icon>
+    <ion-label position="floating">Numero</ion-label>
+    <ion-input [(ngModel)]="numero" placeholder="Numero"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-icon slot="start" name="call-outline"></ion-icon>
+    <ion-label position="floating">Telefone</ion-label>
+    <ion-input [(ngModel)]="telefone" placeholder="Digite aqui seu telefone"></ion-input>
+  </ion-item>
+
+  
+
+<br/> 
+
+  <ion-button (click)="irPagamento()" expand="block">PAGAMENTO</ion-button>
+  
+  </ion-content>
+  

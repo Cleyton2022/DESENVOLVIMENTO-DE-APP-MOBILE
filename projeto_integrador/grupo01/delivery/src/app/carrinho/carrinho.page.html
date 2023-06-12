@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item *ngFor= "let produto of data.carrinho.produtos">
+    <ion-img style= "width: 70px; height: 70px;" [src]="'data:image/png;base64,'+ produto.img"></ion-img>
+    <ion-label style="font-family: Georgia, serif;" style="margin-left: 5%">
+      {{produto.nome}}
+    </ion-label>
+    <ion-label slot="end">
+      {{produto.preco | currency: 'BRL'}}
+    </ion-label>
+  </ion-item>
+
+  <ion-button (click)="irEndereco()" expand="full">SELECIONAR ENDEREÇO</ion-button>
+
+
+</ion-content>
+

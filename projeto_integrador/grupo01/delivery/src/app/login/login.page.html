@@ -1,0 +1,20 @@
+<ion-content>
+
+<h1>Delivery dos Cria</h1>
+
+<h3>Acesso ao sistema</h3>
+
+<ion-item>
+  <ion-label position="floating">Login</ion-label>
+  <ion-input [(ngModel)]="login" placeholder="Digite aqui seu Login"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Senha</ion-label>
+  <ion-input [(ngModel)]="senha" type="password" placeholder="Digite aqui sua Senha"></ion-input>
+</ion-item>
+
+<ion-button (click)="entrar()" expand="block">Entrar</ion-button>
+<ion-button (click)="cadastro()" expand="block" fill="outline">Cadastre-se</ion-button>
+
+</ion-content>
